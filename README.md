@@ -11,3 +11,11 @@ This is a php-based html page giving you access to control your minecraft server
 3) Configure "start-server.sh" to your requirements.
 4) Start your webserver
 5) Open "control-panel.php" in your browser. (example: http://localhost/control-panel.php)
+
+---------------------------------------------------------------------------------
+
+# Download
+
+Download latest zip file here:
+
+- https://github.com/Danirali/Minecraft-Server-Status/latest.zip
