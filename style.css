@@ -1,0 +1,33 @@
+
+html {
+  font-family: 'Quicksand';  
+  background: #333333;
+}
+
+h1 {
+  color: white;
+}
+
+.center {
+  padding: 200px;
+  border: 5px;
+  text-align: center;
+}
+
+.start-btn {
+  text-align: center;
+  padding: 25px;
+  border-radius: 25%;
+  background: green;
+  color: white;
+}
+
+.stop-btn {
+  text-align: center;
+  text-anchor: middle;
+  color: white;
+}
+
+.space {
+  margin: 50px;
+}
