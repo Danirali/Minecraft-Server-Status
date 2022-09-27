@@ -8,8 +8,19 @@ h1 {
   color: white;
 }
 
+.server-ip-label {
+  color: white;
+  margin: auto;
+  text-align: center;
+}
+
 .center {
   padding: 200px;
+  border: 5px;
+  text-align: center;
+}
+
+.center-txt {
   border: 5px;
   text-align: center;
 }
@@ -24,10 +35,21 @@ h1 {
 
 .stop-btn {
   text-align: center;
-  text-anchor: middle;
+  padding: 25px;
+  border-radius: 25%;
+  background: green;
   color: white;
 }
 
 .space {
-  margin: 50px;
+  margin: 80px;
+}
+
+.site-byline {
+  color: white;
+  font-weight: 800;
+}
+
+#bottom {
+  margin-top: 180px;
 }
