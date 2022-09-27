@@ -18,4 +18,4 @@ This is a php-based html page giving you access to control your minecraft server
 
 Download latest zip file here:
 
-- https://github.com/Danirali/Minecraft-Server-Status/latest.zip
+- https://github.com/Danirali/Minecraft-Server-Status/blob/main/latest.zip
