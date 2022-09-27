@@ -17,5 +17,11 @@ This is a php-based html page giving you access to control your minecraft server
 # Download
 
 Download latest zip file here:
-
 - https://github.com/Danirali/Minecraft-Server-Status/blob/main/latest.zip
+
+---------------------------------------------------------------------------------
+
+# Preview
+
+Here is a preview on Repl:
+- https://PHP-GET-Methods.danirali.repl.co
