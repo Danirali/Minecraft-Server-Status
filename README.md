@@ -10,7 +10,7 @@ This is a php-based html page giving you access to control your minecraft server
 2) Extract to /var/www/html (if it doesn't exist, 'mkdir /var/www/html')
 3) Run /var/www/html/Minecraft-Server-Status/install.sh (./install.sh)
 4) Configure 'start-server.sh'
-5) Open http://<youripaddress>:8080
+5) Open http://YOUR_IP_ADDRESS:8080
 
 ---------------------------------------------------------------------------------
 
