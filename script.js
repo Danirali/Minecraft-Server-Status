@@ -44,12 +44,13 @@ function processForm() {
   
       for (const cookie of cookies) {
         const [cookieName, cookieValue] = cookie.trim().split('=');
-        if (cookieName === usersList[0].username || cookieName === usersList[1].username) {
-          // Assuming 'username' is the name of your authentication cookie
-          isAuthenticated = true;
-          console.log('User is authenticated:', cookieValue);
-          authenicateSession(true);
-          break;
+        for (const user of usersList) {
+          if (cookieName === user.username || cookieValue === user.password) {
+            isAuthenticated = true;
+            console.log('User is authenticated:', cookieValue);
+            authenicateSession(true);
+            break;
+          }
         }
       }
     }
