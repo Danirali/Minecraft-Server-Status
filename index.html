@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="login-container" id="login-container">
+        <form class="login-form" id="loginForm">
+            <div class="login-box">
+                <label class="username-label" for="username">Username:
+                    <input class="username-field" type="text" id="username" name="username">
+                </label>
+                <br>
+                <label class="password-label" for="password">Password:
+                    <input class="password-field" type="password" id="password" name="password">
+                </label>
+                <br>
+            </div>
+            <div class="submit-box">
+                <label class="checkbox-label" for="remember-me">
+                    <input type="checkbox" id="remember-me" name="remember-me"> Remember Me
+                </label>
+                <br>
+                <button type="submit">Login</button>
+            </div>
+            <p id="login-error-message"></p>
+        </form>
+    </div>
+    <div class="portal" id="portal">
+        <nav class="nav-header">
+            <a class="brand-icon">
+                <img src="https://avatars.githubusercontent.com/u/74063814?s=48&v=4">
+            </a>
+            <a class="logout-icon" id="logout">
+                <img alt="Logout" src="icons/logout-icon.svg">
+            </a>
+        </nav>
+        <h1 class="header"> </h1>
+        <div class="uptime-box" id="uptime-box">
+            <h1 id="server-name" class="server-name"></h1>
+        </div>
+        <div class="server-info">
+            <ul>
+                <span>Java Server:
+                    <img id="java-server-status-img">
+                <span id="java-server-status"></span><br>
+                </span>
+                <span>Bedrock Server:
+                    <img id="bedrock-server-status-img">
+                    <span id="bedrock-server-status"></span><br>
+                </span>
+            </ul>
+        </div>
+        <div class="controls-box" id="server-controls">
+            <div class="controls-box-column">
+                <a href="#" id="start-server">Start Server</a>
+            </div>
+            <div class="controls-box-column">
+                <a href="#" id="start-server">Stop Server</a>
+            </div>
+            <div class="controls-box-column">
+                <a href="#" id="start-server">Restart Server</a>
+            </div>
+          </div>          
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

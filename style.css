@@ -1,20 +1,24 @@
+:root { 
+    --primary-color: #56c3fe;
+    --secondary-colour: #ffffff;
+    --acent-colour: #000000;
+}  
 
 html {
     font-family: 'quicksand';
 }
 
 .login-container {
-    /* Existing styles... */
-    display: flex; /* Make container a flexbox */
-    align-items: center; /* Align content vertically */
-    justify-content: center; /* Align content horizontally */
-    height: 100vh; /* Optional: Set container height to 100% viewport height */
-    color: #ffffff;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    height: 100vh;
+    color: var(--secondary-colour);
 }
 
 .login-form {
-    background-color: #56c3fe;
-    border: 25px solid #56c3fe;
+    background-color: var(--primary-color);
+    border: 25px solid var(--primary-color);
 }
   
 
@@ -23,18 +27,90 @@ html {
 }
 
 .username-label, .password-label {
-    display: inline-block; /* Make labels inline-block */
+    display: inline-block;
 }
 
 .username-field {
     margin-left: 10px;
+    width: 150px;
 }
 
 .password-field {
-    margin-left: 16px;
+    margin-left: 15.5px;
+    width: 150px;
 }
 
 .checkbox-label {
-    color: #ffffff;
+    color: var(--secondary-colour);
+}
+
+.nav-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+} 
+
+.logout-icon img {
+    width: 50px;
+    height: 35px;    
+    display: inline-block; /* Make labels inline-block */
+    position: absolute;
+    right: 1%;
+    top: 25%;
+}
+
+.logout-icon img:hover {
+    opacity: 60%;
+}
+
+.brand-icon {
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+.brand-icon img {
+    height: 64px;
+    width: 64px;
+}
+
+.server-name {
+    color: var(--accent-colour);
+    z-index: 5;
+}
+
+.header {
+    width: 100%;
+    height: 60px;
+}
+
+.server-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.uptime-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.java-server-status, .bedrock-server-status {
+    display: inline-block;
+}
+
+.controls-box {
+    margin-top: 40px;
+    display: flex; 
+}
+
+.controls-box-column {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
   
