@@ -11,7 +11,7 @@ This is a php-based html page giving you access to control your minecraft server
 # Installation
 1) To start, download the latest zip file.
 2) Extract to /var/www/html (if it doesn't exist, 'mkdir /var/www/html')
-3) Run /var/www/html/Minecraft-Server-Status/install.sh (./install.sh)
+3) ~Run /var/www/html/Minecraft-Server-Status/install.sh (./install.sh)~
 4) Configure 'start-server.sh'
 5) Open http://YOUR_IP_ADDRESS:8080
 
@@ -20,6 +20,6 @@ This is a php-based html page giving you access to control your minecraft server
 # Download
 
 Download latest zip file here:
-- https://github.com/Danirali/Minecraft-Server-Status/blob/main/latest.zip
+~- https://github.com/Danirali/Minecraft-Server-Status/blob/main/latest.zip~
 
 ---------------------------------------------------------------------------------
