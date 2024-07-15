@@ -2,3 +2,39 @@
 html {
     font-family: 'quicksand';
 }
+
+.login-container {
+    /* Existing styles... */
+    display: flex; /* Make container a flexbox */
+    align-items: center; /* Align content vertically */
+    justify-content: center; /* Align content horizontally */
+    height: 100vh; /* Optional: Set container height to 100% viewport height */
+    color: #ffffff;
+}
+
+.login-form {
+    background-color: #56c3fe;
+    border: 25px solid #56c3fe;
+}
+  
+
+.login-box {
+    margin-bottom: 25px;
+}
+
+.username-label, .password-label {
+    display: inline-block; /* Make labels inline-block */
+}
+
+.username-field {
+    margin-left: 10px;
+}
+
+.password-field {
+    margin-left: 16px;
+}
+
+.checkbox-label {
+    color: #ffffff;
+}
+  

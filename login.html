@@ -11,15 +11,26 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <div id="login-container">
-        <h1>Login</h1>
-        <form id="loginForm">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username">
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password">
-            <button type="submit">Login</button>
-            <p id="error-message"></p>
+    <div class="login-container" id="login-container">
+        <form class="login-form" id="loginForm">
+            <div class="login-box">
+                <label class="username-label" for="username">Username:
+                    <input class="username-field" type="text" id="username" name="username">
+                </label>
+                <br>
+                <label class="password-label" for="password">Password:
+                    <input class="password-field" type="password" id="password" name="password">
+                </label>
+                <br>
+            </div>
+            <div class="submit-box">
+                <label class="checkbox-label" for="remember-me">
+                    <input type="checkbox" id="remember-me" name="remember-me"> Remember Me
+                </label>
+                <br>
+                <button type="submit">Login</button>
+            </div>
+            <p id="login-error-message"></p>
         </form>
     </div>
 

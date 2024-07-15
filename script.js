@@ -22,6 +22,15 @@ loginForm.addEventListener('submit', (event) => {
   processForm()
 })
 
+const autoLoginCheckbox = document.getElementById("remember-me");
+
+autoLoginCheckbox.addEventListener("change", function() {
+  console.log("Checkbox state changed!");
+  if (autoLoginCheckbox.checked) {
+    alert('Using auto login creates a security risk as cookies can be used to gain unathorized access! Only use this setting if you are running a LAN server and not exposing it to the wider internet.')
+  }
+});
+
 function processForm() {
   const formData = new FormData(document.getElementById('loginForm'));
   const username = formData.get('username');
@@ -39,7 +48,6 @@ function processForm() {
     let isAuthenticated = false;
 
     if (document.cookie.length > 0) {
-      console.log("Cookie found!")
       const cookies = document.cookie.split(';');
   
       for (const cookie of cookies) {
@@ -47,13 +55,14 @@ function processForm() {
         for (const user of usersList) {
           if (cookieName === user.username || cookieValue === user.password) {
             isAuthenticated = true;
-            console.log('User is authenticated:', cookieValue);
             authenicateSession(true);
             break;
           }
         }
       }
     }
+
+    const loginErrorBox = document.getElementById('login-error-message')
 
     for (const user of usersList) {
       if (user.username === username && user.password === password) {
@@ -64,13 +73,17 @@ function processForm() {
 
     if (adminUsername === username && adminPassword === password) {
       isAuthenticated = true;
-      console.log('Admin Login successful!');
       authenicateSession(true);
+    } else {
+      loginErrorBox.innerHTML = 'Error: Incorrect username or password.'
+      loginErrorBox.style.color = 'red';
     }
-    
+
   })
   .catch(error => {
     console.error('Error fetching credentials file:', error);
+    loginErrorBox.innerHTML = 'Error: ' + error;
+    loginErrorBox.style.color = 'red';  
   });
   
   function authenicateSession(auth) {
@@ -79,15 +92,21 @@ function processForm() {
     }
     if (isAuthenticated === true) {
       console.log(isAuthenticated,"Login authenticated")
-            
+      $('#login-container').hide();
+      if (document.cookie.length <= 0 && autoLoginCheckbox.checked) {
+        genCookie()
+      }
+    }
+    if (auth === 'genCookie') {
+      genCookie()
+    }
+    function genCookie() {
       const today = new Date();
       const expirationDate = new Date(today);
       expirationDate.setDate(today.getDate() + 7);
       const formattedDate = expirationDate.toUTCString();
 
       document.cookie = `${username}=${password}; expires=${formattedDate}`;
-      
-      $('#login-container').hide();
     }
   }
 }
