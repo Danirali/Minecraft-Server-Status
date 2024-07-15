@@ -2,6 +2,7 @@
   {
     "autologin": "enabled",
     "serverName": "DMA Survival",
-    "serverFilename": "paper.jar"
+    "Server Filename": "paper.jar",
+    "Maximum RAM": 2048
   }
 ]

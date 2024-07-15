@@ -50,3 +50,5 @@ if (isset($_GET['start-server']) || $_GET['start-server'] === 'true') {
     echo "Server stopped successfully!";
   }
 }
+
+?>
