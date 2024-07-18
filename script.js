@@ -47,7 +47,7 @@ function processForm(data) {
     authenicateSession(false);
   }
 
-  fetch('./credentials.json')
+  fetch('./data/credentials.json')
   .then(response => response.json())
   .then(data => {
     const usersList = data; 
@@ -57,11 +57,11 @@ function processForm(data) {
     if (document.cookie.length > 0) {
       const cookies = document.cookie.split(';');
   
-      fetch('./settings.json')
+      fetch('./data/settings.json')
       .then(response => response.json())
       .then(settings => {
         const autoLoginEnabled = settings[0].autologin;
-        if (autoLoginEnabled === 'enabled') {
+        if (autoLoginEnabled === "true") {
           for (const cookie of cookies) {
             const [cookieName, cookieValue] = cookie.trim().split('=');
             for (const user of usersList) {
@@ -74,7 +74,7 @@ function processForm(data) {
           }
         }
 
-        document.getElementById('server-name').innerHTML = settings[0].serverName;
+        document.getElementById('server-name').innerHTML = settings[0]['Server Name'];
       })
     }
 
@@ -145,7 +145,7 @@ const javaServerStatus = document.getElementById("java-server-status");
 const bedrockServerStatus = document.getElementById("bedrock-server-status");
 
 function fetchJavaServerStatus() {
-  fetch("status/java-server-status.php")
+  fetch("data/java-server-status.php")
     .then(response => response.text())
     .then(javaStatus => {
       javaServerStatus.textContent = javaStatus;
@@ -161,7 +161,7 @@ function fetchJavaServerStatus() {
     });
 }
 function fetchBedrockServerStatus() {
-    fetch("status/bedrock-server-status.php")
+    fetch("data/bedrock-server-status.php")
     .then(response => response.text())
     .then(bedrockStatus => {
       bedrockServerStatus.textContent = bedrockStatus;
@@ -182,7 +182,7 @@ const stopBtn = document.getElementById("start-server");
 
 startBtn.addEventListener("click", function() {
   // Send a request to file.php with the parameter "request=true"
-  fetch("server-control.php?start-server=true")
+  fetch("data/server-control.php?start-server=true")
     .then(response => response.text())
     .then(data => {
       console.log("Response from file:", data);
