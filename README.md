@@ -3,9 +3,7 @@ This is a php-based html page giving you access to control your minecraft server
 
 # Prerequisites
 - For Linux Systems Only
-- Server Jar file must be named "server.jar"
-- Apache2 Web Server
-- PHP
+- For additional packages run install.sh
 ---------------------------------------------------------------------------------
 
 # Installation
