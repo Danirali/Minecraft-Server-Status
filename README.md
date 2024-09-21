@@ -21,3 +21,13 @@ Download latest zip file here:
 ~- https://github.com/Danirali/Minecraft-Server-Status/blob/main/latest.zip~
 
 ---------------------------------------------------------------------------------
+
+# Screenshots
+Login Page
+![image](https://github.com/user-attachments/assets/ef70121e-d250-455f-bf8b-29787ad2bf78)
+
+Dashboard
+![image](https://github.com/user-attachments/assets/d1e977f8-0a3c-4f92-b986-af623dd0b65d)
+
+Settings
+![image](https://github.com/user-attachments/assets/b63cb8f4-547b-41d8-9eee-a6ce50ddf141)
